@@ -1,0 +1,54 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Comp
+{
+    private int real,imag;
+    Comp()
+    {
+        this.real=0;
+        this.imag=0;
+    }
+    public void setvalue(int real,int imag){
+        this.real=real;
+        this.imag=imag;
+    } 
+    public int getValue(){
+        return real;
+    } 
+    public int getValu(){
+        return imag;
+    }
+    
+    public void add(Comp I)
+    {
+        this.real=this.real+I.real;
+        this.imag=this.imag+I.imag;
+    }
+}
+
+class Codechef
+{
+	public static void main (String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter two numbers");
+		Comp c1=new Comp();
+		 int n=sc.nextInt();
+		 int y=sc.nextInt();
+		c1.setvalue(n,y);
+		Comp c2=new Comp();
+		 int a=sc.nextInt();
+		 int b=sc.nextInt();
+		c2.setvalue(a,b);
+		c1.add(c2);
+		System.out.println(c1.getValue()+"+"+c1.getValu()+"i");
+	}
+}
